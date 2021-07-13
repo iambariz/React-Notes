@@ -5,6 +5,15 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size:16px
+}
+
+
+body{
+  font-size:62.5%
+}
+
 /* Remove default margin */
 body,
 h1,

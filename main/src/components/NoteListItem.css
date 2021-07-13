@@ -1,0 +1,30 @@
+.note-item{
+    max-width: 20rem;
+    background-color: #ffc400;
+    margin: 2.5rem;
+    transform: skewY(2deg);
+    position: relative;
+}
+
+.note-title{
+    padding: 1rem;
+    margin: 0;
+    /* background-color: #daa700; */
+    background-color: #bb8f00; 
+    color: #fff;
+	font-size: 1.6rem;
+    text-transform: uppercase;
+}
+
+.note-desc{
+    padding: 0rem 1rem 1.5rem 1rem;
+    text-align: justify;
+}
+
+.btn-close{
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.5rem;
+    color: rgb(41, 41, 41)
+}
