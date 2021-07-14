@@ -3,13 +3,16 @@ import "./NoteListItem.css";
 
 
 const NoteListItem = (props) =>{
+
+    const removeItem = (e) => {
+        e.currentTarget.parentNode.remove()
+    }
+
     return(
         <div className="note-item">
             <h3 className="note-title">{props.title}</h3>
             <p className="note-desc">{props.desc}</p>
-            <a href="#" class="btn btn-close">
-                <i class="fas fa-times"></i>
-            </a>
+                <i className="fas fa-times btn-close" onClick={removeItem}></i>
         </div>
     )
 }
