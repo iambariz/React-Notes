@@ -3,7 +3,7 @@ import NoteListItem from './NoteListItem';
 
 const NoteHolder = (props) => {
 
-    console.log(props.data) 
+//    console.log(props.data) 
     return (
     <div className="noteHolder">
         {props.data.map(item => {

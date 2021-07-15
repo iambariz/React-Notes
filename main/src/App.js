@@ -1,10 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import NoteHolder from './components/NoteHolder';
+import SideBar from './components/SideBar';
 // import NoteListItem from './components/NoteListItem.js'
 
 const content = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto voluptatibus, alias molestiae quibusdam a voluptas vitae repudiandae recusandae praesentium est reprehenderit harum deleniti pariatur eos sit mollitia minus iste nesciunt."
 
+
+//Dummy data
 
 const notes = [
   {
@@ -21,6 +24,11 @@ const notes = [
     title: "Test 3",
     desc: content,
     id: 3,
+  },
+  {
+    title: "Test 4",
+    desc: content,
+    id: 4,
   },]
 
 const App = () => {
@@ -33,9 +41,9 @@ const App = () => {
     // <NoteListItem title="Test title" desc={content} />
     // <NoteListItem title="Test title" desc={content} /></div>
     <React.Fragment>
+      {ReactDOM.createPortal(<SideBar />, document.querySelector('#root'))}
       {ReactDOM.createPortal(<NoteHolder data={notes} />, document.querySelector('#root'))}
     </React.Fragment>
-    
 
  )
 }
