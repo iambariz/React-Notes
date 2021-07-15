@@ -1,5 +1,6 @@
 .note-item{
     max-width: 20rem;
+    min-width: 15rem;
     background-color: #ffc400;
     margin: 2.5rem;
     transform: skewY(2deg);
@@ -28,4 +29,11 @@
     font-size: 1.5rem;
     color: rgb(41, 41, 41);
     cursor: pointer;
+}
+
+.noteHolder{
+    display: flex;
+    align-items: center;
+    justify-content:space-evenly;
+    flex-wrap: wrap;
 }
