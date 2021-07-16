@@ -5,6 +5,11 @@ import "./SideBar.css";
 
 const SideBar = (props) => {
 
+    const deleteItemHandler = (item) => {
+        const index = item.currentTarget.parentNode.id;
+        props.onChangeExpense(index)
+    }
+ 
     // document.addEventListener('keypress', function(e){
     //     if(e.key === "e"){
     //         const el = document.querySelector('.sidebar');
@@ -15,12 +20,12 @@ const SideBar = (props) => {
     return (
     <div className="sidebar">
         <h1>  <span className="username">John</span>'s notes</h1>
-        <div className="div"><a href="#" className="btn btn-create">New note <i class="fas fa-plus-circle"></i></a> </div>
+        <div className="div"><a href="#" className="btn btn-create">New note <i className="fas fa-plus-circle"></i></a> </div>
         <div className="div">
             <h2>My notes:</h2>
             <ul className="note-ul">
-                {props.data.map(element => {
-                    return(<SideBarNote title={element.title}/>)
+                {props.data.map((element, index) => {
+                    return(<SideBarNote key={index} id={element.id} title={element.title} onRemove={deleteItemHandler}/>)
                 })}
             </ul>
         </div>

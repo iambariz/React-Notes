@@ -7,6 +7,7 @@ const NoteHolder = (props) => {
     return (
     <div className="noteHolder">
         {props.data.map(item => {
+            // console.log(item.id)
             return (<NoteListItem title={item.title} desc={item.desc} key={item.id}/>)
         })}
     </div>)
