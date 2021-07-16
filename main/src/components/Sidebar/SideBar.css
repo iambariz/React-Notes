@@ -3,8 +3,8 @@
     left:0;
     top: 0;
     height: 100%;
-    width: 20%;
-    background-color: #323232a9;
+    width: 17.25%;
+    background-color: #1f1f1f;
     z-index: 1024;
     transition: .8s ease-out all;
 }

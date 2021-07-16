@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import NoteHolder from './components/NoteHolder';
-import SideBar from './components/SideBar';
+import NoteHolder from './components/Note/NoteHolder';
+import SideBar from './components/Sidebar/SideBar';
 // import NoteListItem from './components/NoteListItem.js'
 
 const content = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto voluptatibus, alias molestiae quibusdam a voluptas vitae repudiandae recusandae praesentium est reprehenderit harum deleniti pariatur eos sit mollitia minus iste nesciunt."
