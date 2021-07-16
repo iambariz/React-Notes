@@ -10,11 +10,10 @@
     display: flex;
     flex-direction: column;
     color: #fff;
-
 }
 
 .username{
-    font-size: 2.6rem;
+    font-size: 2.8rem;
     letter-spacing: 0.25rem;
 }
 
@@ -27,8 +26,8 @@
     content: '';
     position: absolute;
     bottom: -.5rem;
-    left: 25%;
-    width: 50%;
+    left: 12.5%;
+    width: 75%;
     border-bottom: 1.5px solid #E1481B;
 }
 
@@ -39,7 +38,7 @@
     background-color: #AEA8AB;
     padding: 0.5rem;
     font-weight: bold;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     text-decoration: none;
 }
 
@@ -49,4 +48,55 @@
 
 .fa-plus-circle{
     color:#3B323C;
+    position: relative;
+    z-index: 1024;
+}
+
+.fa-plus-circle::after{
+    content: '';
+    width: 80%;
+    height: 80%;
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateX(-150%);
+    transform: translateY(-50%);
+    background-color: #fff;
+    z-index: -1;
+    border-radius: 2rem;
+    transition: .8s ease-in-out;
+    
+}
+
+
+h2{
+    font-size: 2.4rem;
+    padding: 0rem 1rem;
+    margin-bottom: 0rem;
+    position: relative;
+}
+
+
+
+.note-ul{
+    list-style: none;
+}
+
+.note-li{
+    font-size: 1.1rem;
+    letter-spacing: .25rem;
+    text-transform: uppercase;
+    background-color: #AEA8AB;
+    font-weight: bold;
+    color: #EAF3F0;
+    margin: .5rem;
+    padding: .25rem ;
+    max-width: 8rem;
+    border-radius: 2rem;
+    text-align: center;
+}
+
+.btn-sidebar{
+    color: #E1481B;
+    cursor: pointer;
 }
