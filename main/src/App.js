@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState} from 'react';
 import ReactDOM from 'react-dom';
 import NoteHolder from './components/Note/NoteHolder';
 import SideBar from './components/Sidebar/SideBar';
@@ -8,6 +8,7 @@ const content = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto 
 
 
 //Dummy data
+
 
 const notes = [
   {
@@ -29,9 +30,24 @@ const notes = [
     title: "Test 4",
     desc: content,
     id: 4,
+  },
+  {
+    title: "Test 5",
+    desc: content,
+    id: 5,
+  },
+  {
+    title: "Test 6",
+    desc: content,
+    id: 6,
   },]
 
 const App = () => {
+
+  const [EditedNotes, updateNotes] = useState(notes);
+
+
+
   return(
     // <div>   <NoteHolder></NoteHolder>
     // <NoteListItem title="Test title" desc={content} />
@@ -41,8 +57,8 @@ const App = () => {
     // <NoteListItem title="Test title" desc={content} />
     // <NoteListItem title="Test title" desc={content} /></div>
     <React.Fragment>
-      {ReactDOM.createPortal(<SideBar />, document.querySelector('#root'))}
-      {ReactDOM.createPortal(<NoteHolder data={notes} />, document.querySelector('#root'))}
+      {ReactDOM.createPortal(<SideBar data={EditedNotes} />, document.querySelector('#root'))}
+      {ReactDOM.createPortal(<NoteHolder data={EditedNotes} />, document.querySelector('#root'))}
     </React.Fragment>
 
  )

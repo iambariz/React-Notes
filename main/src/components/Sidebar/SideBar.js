@@ -1,4 +1,5 @@
 import React from 'react';
+import SideBarNote from './SideBarNote';
 import "./SideBar.css";
 
 
@@ -18,10 +19,9 @@ const SideBar = (props) => {
         <div className="div">
             <h2>My notes:</h2>
             <ul className="note-ul">
-                <li className="note-li">Test 1  <i className="fas fa-times btn-sidebar" ></i></li>
-                <li className="note-li">Test 2  <i className="fas fa-times btn-sidebar" ></i></li>
-                <li className="note-li">Test 3  <i className="fas fa-times btn-sidebar" ></i></li>
-                <li className="note-li">Test 4  <i className="fas fa-times btn-sidebar" ></i></li>
+                {props.data.map(element => {
+                    return(<SideBarNote title={element.title}/>)
+                })}
             </ul>
         </div>
         <div className="div"></div>
