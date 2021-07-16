@@ -4,7 +4,49 @@
     top: 0;
     height: 100%;
     width: 17.25%;
-    background-color: #1f1f1f;
+    background-color: #36363D;
     z-index: 1024;
     transition: .8s ease-out all;
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+
+}
+
+.username{
+    font-size: 2.6rem;
+    letter-spacing: 0.25rem;
+}
+
+.sidebar h1{
+    position: relative;
+    margin: 1.5rem auto;
+}
+
+.sidebar h1::after{
+    content: '';
+    position: absolute;
+    bottom: -.5rem;
+    left: 25%;
+    width: 50%;
+    border-bottom: 1.5px solid #E1481B;
+}
+
+.btn-create{
+    color: #EAF3F0;
+    font-family: inherit;
+    border-radius: 0 2rem 2rem 0;
+    background-color: #AEA8AB;
+    padding: 0.5rem;
+    font-weight: bold;
+    font-size: 1.3rem;
+    text-decoration: none;
+}
+
+.div{
+    margin-top: 2.5rem;
+}
+
+.fa-plus-circle{
+    color:#3B323C;
 }

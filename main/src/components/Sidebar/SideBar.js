@@ -13,7 +13,10 @@ const SideBar = (props) => {
 
     return (
     <div className="sidebar">
-
+        <h1>  <span className="username">John</span>'s notes</h1>
+        <div className="div"><a href="#" className="btn btn-create">New note <i class="fas fa-plus-circle"></i></a> </div>
+        <div className="div"></div>
+        <div className="div"></div>
     </div>)
 }
 
