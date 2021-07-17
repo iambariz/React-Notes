@@ -91,12 +91,21 @@ h2{
     color: #EAF3F0;
     margin: .75rem auto;
     padding: .50rem ;
-    max-width: 8rem;
+    max-width: 10rem;
     border-radius: 2rem;
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
 .btn-sidebar{
     color: #E1481B;
     cursor: pointer;
+}
+
+.btn-edit{
+    cursor: pointer;
+    color: #ffffff;
+    font-size: 1rem;
 }

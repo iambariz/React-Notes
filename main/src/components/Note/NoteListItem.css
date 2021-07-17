@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
 .note-item{
     max-width: 20rem;
     min-width: 15rem;
@@ -5,6 +6,8 @@
     margin: 2.5rem;
     transform: skewY(2deg);
     position: relative;
+    -webkit-box-shadow: 10px 10px 14px 1px #a0a0a0; 
+    box-shadow: 10px 10px 14px 1px #626262;
 }
 
 .note-title{
@@ -20,7 +23,7 @@
 .note-desc{
     padding: 0rem 1rem 1.5rem 1rem;
     text-align: justify;
-}
+    font-family: 'Patrick Hand', cursive;}
 
 .btn-close{
     position: absolute;
