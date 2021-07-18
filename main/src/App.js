@@ -76,6 +76,7 @@ const App = () => {
     // <NoteListItem title="Test title" desc={content} />
     // <NoteListItem title="Test title" desc={content} />
     // <NoteListItem title="Test title" desc={content} /></div>
+    
     <React.Fragment>
       {ReactDOM.createPortal(<SideBar onChangeExpense={updateNoteHandler} data={EditedNotes} />, document.querySelector('#root'))}
       {ReactDOM.createPortal(<NoteHolder onChangeExpense={updateNoteHandler} data={EditedNotes} />, document.querySelector('#root'))}

@@ -28,6 +28,7 @@ const SideBar = (props) => {
                     return(<SideBarNote key={index} id={element.id} title={element.title} onRemove={deleteItemHandler}/>)
                 })}
             </ul>
+            
         </div>
         <div className="div"></div>
     </div>)
