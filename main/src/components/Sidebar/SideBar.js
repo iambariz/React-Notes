@@ -9,6 +9,11 @@ const SideBar = (props) => {
         const index = item.currentTarget.parentNode.id;
         props.onChangeExpense(index)
     }
+
+    const editItemHandler = (item) => {
+        const id = item.currentTarget.parentNode.id;
+        props.onEditClick(id)
+    }
  
     // document.addEventListener('keypress', function(e){
     //     if(e.key === "e"){
@@ -25,7 +30,7 @@ const SideBar = (props) => {
             <h2>My notes:</h2>
             <ul className="note-ul">
                 {props.data.map((element, index) => {
-                    return(<SideBarNote key={index} id={element.id} title={element.title} onRemove={deleteItemHandler}/>)
+                    return(<SideBarNote key={index} id={element.id} title={element.title} onRemove={deleteItemHandler} onEdit={editItemHandler}/>)
                 })}
             </ul>
             

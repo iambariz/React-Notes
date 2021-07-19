@@ -45,16 +45,24 @@ const notes = [
 const App = () => {
 
   const [EditedNotes, updateNote] = useState(notes);
+  const [EditedElement, switchEdit] = useState('');
 
   const updateNoteHandler = (removedNote) => {
     console.log(removedNote);
     updateNote((prevValue) =>{
       const filtered = prevValue.filter(function(value){ 
+        // eslint-disable-next-line eqeqeq
         return value.id != removedNote;
       });
       return filtered
     })
   }
+  const switchEditHandler = (editedElement) => {
+    const notes = document.querySelectorAll('.note-item');
+    console.log(notes)
+    console.log(editedElement)
+  }
+
   // }    setExpenses((prevExpenses) => {
   //   return [expense, ...prevExpenses];
   // });
@@ -78,7 +86,7 @@ const App = () => {
     // <NoteListItem title="Test title" desc={content} /></div>
     
     <React.Fragment>
-      {ReactDOM.createPortal(<SideBar onChangeExpense={updateNoteHandler} data={EditedNotes} />, document.querySelector('#root'))}
+      {ReactDOM.createPortal(<SideBar onChangeExpense={updateNoteHandler} onEditClick={switchEditHandler} data={EditedNotes} />, document.querySelector('#root'))}
       {ReactDOM.createPortal(<NoteHolder onChangeExpense={updateNoteHandler} data={EditedNotes} />, document.querySelector('#root'))}
     </React.Fragment>
 
