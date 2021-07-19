@@ -48,7 +48,7 @@ const App = () => {
   const [EditedElement, switchEdit] = useState('');
 
   const updateNoteHandler = (removedNote) => {
-    console.log(removedNote);
+    //console.log(removedNote);
     updateNote((prevValue) =>{
       const filtered = prevValue.filter(function(value){ 
         // eslint-disable-next-line eqeqeq
@@ -58,9 +58,11 @@ const App = () => {
     })
   }
   const switchEditHandler = (editedElement) => {
-    const notes = document.querySelectorAll('.note-item');
-    console.log(notes)
-    console.log(editedElement)
+    const element = document.querySelector(`[data-id*="${editedElement}"]`);
+    element.classList.add('edited')
+    console.log(element)
+
+
   }
 
   // }    setExpenses((prevExpenses) => {
