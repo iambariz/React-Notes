@@ -2,6 +2,7 @@
 .note-item{
     max-width: 20rem;
     min-width: 15rem;
+    height: 18rem;
     background-color: #ffc400;
     margin: 2.5rem;
     transform: skewY(2deg);

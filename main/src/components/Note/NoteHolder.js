@@ -12,8 +12,9 @@ const NoteHolder = (props) => {
     return (
     <div className="noteHolder">
         {props.data.map((item,index) => {
-            // console.log(item.id)
-            return (<NoteListItem onDelete={deleteItemHandler} title={item.title} id={item.id} desc={item.desc} key={index}/>)
+            console.log(item.OnEdit)
+            console.log(item)
+            return (<NoteListItem onDelete={deleteItemHandler} title={item.title} id={item.id} desc={item.desc} key={index} onEdit={item.onEdit}/>)
         })}
     </div>)
 }

@@ -13,31 +13,37 @@ const content = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto 
 const notes = [
   {
     title: "Test 1",
+    onEdit: true,
     desc: content,
     id: Math.random(),
   },
   {
     title: "Test 2",
+    onEdit: false,
     desc: content,
     id: Math.random(),
   },
   {
     title: "Test 3",
+    onEdit: false,
     desc: content,
     id: Math.random(),
   },
   {
     title: "Test 4",
+    onEdit: false,
     desc: content,
     id: Math.random(),
   },
   {
     title: "Test 5",
+    onEdit: false,
     desc: content,
     id: Math.random(),
   },
   {
     title: "Test 6",
+    onEdit: false,
     desc: content,
     id: Math.random(),
   },]
@@ -61,8 +67,6 @@ const App = () => {
     const element = document.querySelector(`[data-id*="${editedElement}"]`);
     element.classList.add('edited')
     console.log(element)
-
-
   }
 
   // }    setExpenses((prevExpenses) => {

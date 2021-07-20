@@ -1,12 +1,16 @@
-import React from 'react';
+import React,{useState, useEffect} from 'react';
+import EditField from './EditField';
 import "./NoteListItem.css";
 
 
 const NoteListItem = (props) =>{
 
+    console.log(props.onEdit)
+
     // const removeItem = (e) => {
     //     e.currentTarget.parentNode.remove()
     // }
+
 
     return(
         <div className="note-item" data-id={props.id} key={props.key}>
@@ -14,7 +18,12 @@ const NoteListItem = (props) =>{
             {/* <textarea class="textArea" name="Text-Inp" rows="4" cols="50" maxlength="256" >
            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto voluptatibus, alias molestiae quibusdam a voluptas vitae repudiandae recusandae praesentium est reprehenderit harum deleniti pariatur eos sit mollitia minus iste nesciunt.
             </textarea> */}
-            <p className="note-desc">{props.desc}</p>
+            { //Check if message failed
+                (props.onEdit === true)
+                ? <EditField content={props.content}/>
+                : <p className="note-desc">{props.desc}</p>
+            }
+            
                 <i className="fas fa-times btn-close" onClick={props.onDelete}></i>
         </div>
     )
