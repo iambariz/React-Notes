@@ -1,15 +1,19 @@
-import React,{useState, useEffect} from 'react';
+import React,{useState} from 'react';
 import EditField from './EditField';
 import "./NoteListItem.css";
 
 
 const NoteListItem = (props) =>{
 
-    console.log(props.onEdit)
-
     // const removeItem = (e) => {
     //     e.currentTarget.parentNode.remove()
     // }
+
+    const [inEdit, setEdit] = useState(false);
+
+    const setEditHandler = () => {
+        setEdit(true);
+    }
 
 
     return(

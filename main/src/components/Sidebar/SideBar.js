@@ -11,7 +11,7 @@ const SideBar = (props) => {
     }
 
     const editItemHandler = (item) => {
-        const id = item.currentTarget.parentNode.id;
+        const id = item.currentTarget.parentNode.dataset.id;
         props.onEditClick(id)
     }
  

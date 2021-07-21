@@ -15,43 +15,42 @@ const notes = [
     title: "Test 1",
     onEdit: true,
     desc: content,
-    id: Math.random(),
+    id: 1
   },
   {
     title: "Test 2",
     onEdit: false,
     desc: content,
-    id: Math.random(),
+    id: 2
   },
   {
     title: "Test 3",
     onEdit: false,
     desc: content,
-    id: Math.random(),
+    id: 3
   },
   {
     title: "Test 4",
     onEdit: false,
     desc: content,
-    id: Math.random(),
+    id: 4
   },
   {
     title: "Test 5",
     onEdit: false,
     desc: content,
-    id: Math.random(),
+    id: 5
   },
   {
     title: "Test 6",
     onEdit: false,
     desc: content,
-    id: Math.random(),
+    id: 6
   },]
 
 const App = () => {
 
   const [EditedNotes, updateNote] = useState(notes);
-  const [EditedElement, switchEdit] = useState('');
 
   const updateNoteHandler = (removedNote) => {
     //console.log(removedNote);
@@ -63,10 +62,23 @@ const App = () => {
       return filtered
     })
   }
-  const switchEditHandler = (editedElement) => {
-    const element = document.querySelector(`[data-id*="${editedElement}"]`);
-    element.classList.add('edited')
-    console.log(element)
+  const switchEditHandler = (editedElementId) => {
+    // eslint-disable-next-line eqeqeq
+    console.log(editedElementId)
+    updateNote((prevValue) =>{
+      const filtered = prevValue.filter(function(value){ 
+        // eslint-disable-next-line eqeqeq
+        if(value.id == editedElementId){
+          value.onEdit = true;
+        }
+        return value
+      });
+      console.log(filtered)
+      return filtered
+    })
+    // const element = document.querySelector(`[data-id*="${editedElementId}"]`);
+    // element.classList.add('edited')
+    // console.log(element)
   }
 
   // }    setExpenses((prevExpenses) => {
