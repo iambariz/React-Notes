@@ -81,9 +81,21 @@ const App = () => {
     // console.log(element)
   }
 
+  //[value, id]
   const editDataGather = (arr) => {
     console.log(arr)
-    
+    updateNote((prevValue) =>{
+      const filtered = prevValue.filter(function(value){ 
+        // eslint-disable-next-line eqeqeq
+        if(value.id == arr[1]){
+          value.onEdit = false;
+          value.desc = arr[0]
+        }
+        return value
+      });
+//      console.log(filtered)
+      return filtered
+    })
   }
 
   // }    setExpenses((prevExpenses) => {
