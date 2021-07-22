@@ -7,14 +7,16 @@ const EditField = (props) =>{
 
 
     //Gets the value 
+    //[value, id]
   
     const gatherData= (e) => {
+        
         const newValue = e.currentTarget.previousSibling.value;
         if(newValue.trim().length > 1){
-            return newValue
+            props.passData([newValue, e.currentTarget.previousSibling.name]) 
         }
         else{
-            return e.currentTarget.previousSibling.defaultValue
+            props.passData([e.currentTarget.previousSibling.defaultValue, e.currentTarget.previousSibling.name]) 
         }
     }
 

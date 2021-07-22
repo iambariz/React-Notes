@@ -81,6 +81,11 @@ const App = () => {
     // console.log(element)
   }
 
+  const editDataGather = (arr) => {
+    console.log(arr)
+    
+  }
+
   // }    setExpenses((prevExpenses) => {
   //   return [expense, ...prevExpenses];
   // });
@@ -105,7 +110,7 @@ const App = () => {
     
     <React.Fragment>
       {ReactDOM.createPortal(<SideBar onChangeExpense={updateNoteHandler} onEditClick={switchEditHandler} data={EditedNotes} />, document.querySelector('#root'))}
-      {ReactDOM.createPortal(<NoteHolder onChangeExpense={updateNoteHandler} data={EditedNotes} />, document.querySelector('#root'))}
+      {ReactDOM.createPortal(<NoteHolder passDataHandler={editDataGather} onChangeExpense={updateNoteHandler} data={EditedNotes} />, document.querySelector('#root'))}
     </React.Fragment>
 
  )
