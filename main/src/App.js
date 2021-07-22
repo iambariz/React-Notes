@@ -56,11 +56,16 @@ const App = () => {
     //console.log(removedNote);
     updateNote((prevValue) =>{
       const filtered = prevValue.filter(function(value){ 
+        console.log(removedNote)
+        console.log(value.id)
         // eslint-disable-next-line eqeqeq
         return value.id != removedNote;
       });
+
       return filtered
     })
+
+    
   }
   const switchEditHandler = (editedElementId) => {
     // eslint-disable-next-line eqeqeq
@@ -83,19 +88,19 @@ const App = () => {
 
   //[value, id]
   const editDataGather = (arr) => {
-    console.log(arr)
-    updateNote((prevValue) =>{
-      const filtered = prevValue.filter(function(value){ 
-        // eslint-disable-next-line eqeqeq
-        if(value.id == arr[1]){
-          value.onEdit = false;
-          value.desc = arr[0]
-        }
-        return value
-      });
-//      console.log(filtered)
-      return filtered
-    })
+//    console.log(arr)
+//     updateNote((prevValue) =>{
+//       const filtered = prevValue.filter(function(value){ 
+//         // eslint-disable-next-line eqeqeq
+//         if(value.id == arr[1]){
+//           value.onEdit = false;
+//           value.desc = arr[0]
+//         }
+//         return value
+//       });
+// //      console.log(filtered)
+//       return filtered
+//     })
   }
 
   // }    setExpenses((prevExpenses) => {

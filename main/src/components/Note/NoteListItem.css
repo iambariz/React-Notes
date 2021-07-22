@@ -51,7 +51,7 @@
     font-family: 'Patrick Hand', cursive;
     display: block;
     max-width: 90%;
-    height: auto;
+    max-height: auto;
     font-size: 1rem;
     resize: none;
     margin: 16px 0px;

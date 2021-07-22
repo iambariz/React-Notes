@@ -22,7 +22,7 @@ const EditField = (props) =>{
 
     return(
     <React.Fragment>
-        <textarea className="textArea" name={props.id} rows="8" cols="50" maxLength="256" defaultValue={props.content}>
+        <textarea className="textArea" name={props.id} rows="6" cols="50" maxLength="256" defaultValue={props.content}>
         </textarea>
         <i onClick={gatherData} className="fas fa-check tick-btn"></i>
     </React.Fragment>

@@ -6,7 +6,7 @@ import "./SideBar.css";
 const SideBar = (props) => {
 
     const deleteItemHandler = (item) => {
-        const index = item.currentTarget.parentNode.id;
+        const index = item.currentTarget.parentNode.dataset.id;
         props.onChangeExpense(index)
     }
 
