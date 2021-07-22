@@ -14,7 +14,7 @@ const NoteListItem = (props) =>{
     }
 
     return(
-        <div className={props.onEdit ? "note-item edited" : "note-item"} data-id={props.id} key={props.key}>
+        <div className={props.onEdit ? "note-item onEdit" : "note-item"} data-id={props.id} key={props.key}>
             <h3 className="note-title">{props.title}</h3>
             { //Check if message failed
                 (props.onEdit === true)

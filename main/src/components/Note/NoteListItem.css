@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+
 .note-item{
-    max-width: 20rem;
-    min-width: 15rem;
+    width: 20rem;
     height: 18rem;
     background-color: #ffc400;
     margin: 2.5rem;
@@ -9,6 +9,7 @@
     position: relative;
     -webkit-box-shadow: 10px 10px 14px 1px #a0a0a0; 
     box-shadow: 10px 10px 14px 1px #626262;
+    box-sizing: border-box;
 }
 
 .note-title{
@@ -73,4 +74,8 @@
     font-size: 1.6rem;
     right: 1.2rem;
     bottom: .5rem;
+}
+
+.onEdit{
+    outline: 3px solid rgb(255, 0, 0);
 }
