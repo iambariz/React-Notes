@@ -17,7 +17,7 @@ const NoteListItem = (props) =>{
             </textarea> */}
             { //Check if message failed
                 (props.onEdit === true)
-                ? <EditField  content={props.desc}/>
+                ? <EditField id={props.id} content={props.desc}/>
                 : <p className="note-desc">{props.desc}</p>
             }
             
