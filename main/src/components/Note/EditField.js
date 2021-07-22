@@ -1,5 +1,6 @@
 import React,{useState} from 'react';
 import "./NoteListItem";
+import ReactDOM from 'react-dom';
 
 const EditField = (props) =>{
 
@@ -11,9 +12,13 @@ const EditField = (props) =>{
     // })
 
     return(
-    <textarea className="textArea" name="Text-Inp" rows="9" cols="50" maxLength="256" >
-    {props.content}
-     </textarea>
+    <React.Fragment>
+        <textarea className="textArea" name="Text-Inp" rows="8" cols="50" maxLength="256">
+        {props.content}
+        </textarea>
+        <i class="fas fa-check"></i>
+    </React.Fragment>
+
     );
 }
 

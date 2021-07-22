@@ -9,13 +9,6 @@ const NoteListItem = (props) =>{
     //     e.currentTarget.parentNode.remove()
     // }
 
-    const [inEdit, setEdit] = useState(false);
-
-    const setEditHandler = () => {
-        setEdit(true);
-    }
-
-
     return(
         <div className="note-item" data-id={props.id} key={props.key}>
             <h3 className="note-title">{props.title}</h3>
@@ -24,7 +17,7 @@ const NoteListItem = (props) =>{
             </textarea> */}
             { //Check if message failed
                 (props.onEdit === true)
-                ? <EditField content={props.content}/>
+                ? <EditField  content={props.desc}/>
                 : <p className="note-desc">{props.desc}</p>
             }
             

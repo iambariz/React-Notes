@@ -64,7 +64,7 @@ const App = () => {
   }
   const switchEditHandler = (editedElementId) => {
     // eslint-disable-next-line eqeqeq
-    console.log(editedElementId)
+ //   console.log(editedElementId)
     updateNote((prevValue) =>{
       const filtered = prevValue.filter(function(value){ 
         // eslint-disable-next-line eqeqeq
@@ -73,7 +73,7 @@ const App = () => {
         }
         return value
       });
-      console.log(filtered)
+//      console.log(filtered)
       return filtered
     })
     // const element = document.querySelector(`[data-id*="${editedElementId}"]`);

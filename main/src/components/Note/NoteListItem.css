@@ -54,9 +54,23 @@
     height: auto;
     font-size: 1rem;
     resize: none;
+    margin: 16px 0px;
+    resize: none;
+    text-align: justify;
+    white-space: pre-line;
+    -moz-text-align-last: left;
+    text-align-last: left;
 
   }
   
   .textArea:focus {
     outline: none /* Removes the border when the input is clicked */
   }
+
+.fa-check{
+    cursor: pointer;
+    position: absolute;
+    font-size: 1.8rem;
+    right: 1.2rem;
+    bottom: .5rem;
+}
