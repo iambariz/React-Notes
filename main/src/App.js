@@ -2,6 +2,7 @@ import React,{useState} from 'react';
 import ReactDOM from 'react-dom';
 import NoteHolder from './components/Note/NoteHolder';
 import SideBar from './components/Sidebar/SideBar';
+import AddNote from './components/AddNote/AddNote';
 // import NoteListItem from './components/NoteListItem.js'
 
 const content = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto voluptatibus, alias molestiae quibusdam a voluptas vitae repudiandae recusandae praesentium est reprehenderit harum deleniti pariatur eos sit mollitia minus iste nesciunt."
@@ -122,8 +123,9 @@ const App = () => {
     // <NoteListItem title="Test title" desc={content} />
     // <NoteListItem title="Test title" desc={content} />
     // <NoteListItem title="Test title" desc={content} /></div>
-    
+  
     <React.Fragment>
+      {ReactDOM.createPortal(<AddNote />, document.querySelector('#root'))}
       {ReactDOM.createPortal(<SideBar onChangeExpense={updateNoteHandler} onEditClick={switchEditHandler} data={EditedNotes} />, document.querySelector('#root'))}
       {ReactDOM.createPortal(<NoteHolder passDataHandler={editDataGather} onChangeExpense={updateNoteHandler} data={EditedNotes} />, document.querySelector('#root'))}
     </React.Fragment>
