@@ -1,21 +1,28 @@
 import React,{useState} from 'react';
 import "./NoteListItem";
-import ReactDOM from 'react-dom';
 
 const EditField = (props) =>{
 
     // const [inEdit, inEditHandler] = useState('true');
 
+
+    //Gets the value 
   
     const gatherData= (e) => {
-
+        const newValue = e.currentTarget.previousSibling.value;
+        if(newValue.trim().length > 1){
+            return newValue
+        }
+        else{
+            return e.currentTarget.previousSibling.defaultValue
+        }
     }
 
     return(
     <React.Fragment>
         <textarea className="textArea" name={props.id} rows="8" cols="50" maxLength="256" defaultValue={props.content}>
         </textarea>
-        <i className="fas fa-check tick-btn"></i>
+        <i onClick={gatherData} className="fas fa-check tick-btn"></i>
     </React.Fragment>
 
     );
