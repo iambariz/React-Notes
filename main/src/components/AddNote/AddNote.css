@@ -1,10 +1,11 @@
+
 .overlay{
     position: absolute;
     left: 0;
     top: 0;
     height: 100%;
     width: 100%;
-    background-color: rgba(90, 90, 90, 0.609);
+    background-color: rgba(63, 63, 63, 0.609);
     z-index: 23232;
     display: flex;
     align-items: center;
@@ -12,33 +13,61 @@
 }
 
 .form-container{
-    width: 45rem;
+    width: 35rem;
     height: 30rem;
     position: relative;
-    background-color: #b3b3b3;
+    background-color: #353535ef;
     display: flex;
     justify-content:center;
     flex-direction: column;
-    align-items: center;
+    border-radius: 2.5rem;
 }
+
 
 label{
     display: block;
     max-width: 15rem;
+    font-size: 1.78rem;
+    font-weight: 600;
+    margin-bottom: .5rem;
+    color: #fff;
 }
 
 input{
-    max-width: 20rem;
+    width: 12.5rem;
+    border-radius: 0.3rem;
+    margin-bottom: 2rem;
+    height: 1.5rem;
+    padding: .5rem;
+}
+
+textarea{
+    padding: .5rem;
+    margin: 2rem auto;
+    resize: none;
+}
+
+.input-container{
+    margin-left: 5.5rem;
 }
 
 .btn-submit{
-
+    margin: 0 auto;
+    font-size:1.3rem;
+    font-weight: 600;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    padding: .75rem 1.5rem;
+    background-color: #fff;
+    border-radius: 1rem;
 }
 
 .btn-close-form{
     position: absolute;
     font-size: 2rem;
-    top: 2rem;
+    top: 1.5rem;
     right: 2rem;
+    cursor: pointer;
+    color: #fff;
 
 }
