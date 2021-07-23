@@ -64,6 +64,16 @@ textarea{
     padding: .75rem 1.5rem;
     background-color: #fff;
     border-radius: 1rem;
+    transition: .6s ease all;
+}
+
+.btn-submit:hover{
+    background-color:rgb(175, 175, 175);
+
+
+
+    color: rgb(50, 50, 50);
+
 }
 
 .btn-close-form{
@@ -73,5 +83,4 @@ textarea{
     right: 2rem;
     cursor: pointer;
     color: #fff;
-
 }

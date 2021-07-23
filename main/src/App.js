@@ -87,7 +87,7 @@ const App = () => {
 
   //[value, id]
   const editDataGather = (arr) => {
-   console.log(arr)
+//   console.log(arr)
     updateNote((prevValue) =>{
       const filtered = prevValue.filter(function(value){ 
         // eslint-disable-next-line eqeqeq
@@ -100,6 +100,19 @@ const App = () => {
 //      console.log(filtered)
       return filtered
     })
+  }
+
+  //[title, content]
+  const newNote = (arr) => {
+    const newValue = {
+      title: arr[0],
+      onEdit: false,
+      desc: arr[1],
+      id: new Date().getTime(),
+    }
+    updateNote((prevValue) =>{
+        return [...prevValue, newValue];
+      });
   }
 
   // }    setExpenses((prevExpenses) => {
@@ -125,7 +138,7 @@ const App = () => {
     // <NoteListItem title="Test title" desc={content} /></div>
   
     <React.Fragment>
-      {ReactDOM.createPortal(<AddNote />, document.querySelector('#root'))}
+      {ReactDOM.createPortal(<AddNote forwardData={newNote} />, document.querySelector('#root'))}
       {ReactDOM.createPortal(<SideBar onChangeExpense={updateNoteHandler} onEditClick={switchEditHandler} data={EditedNotes} />, document.querySelector('#root'))}
       {ReactDOM.createPortal(<NoteHolder passDataHandler={editDataGather} onChangeExpense={updateNoteHandler} data={EditedNotes} />, document.querySelector('#root'))}
     </React.Fragment>
