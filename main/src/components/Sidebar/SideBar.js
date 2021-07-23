@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState} from 'react';
 import SideBarNote from './SideBarNote';
 import "./SideBar.css";
 
@@ -14,6 +14,11 @@ const SideBar = (props) => {
         const id = item.currentTarget.parentNode.dataset.id;
         props.onEditClick(id)
     }
+
+    const openNewNote = () =>{
+        const overlay = document.querySelector('.overlay');
+        overlay.classList.add('open')
+    }
  
     // document.addEventListener('keypress', function(e){
     //     if(e.key === "e"){
@@ -25,7 +30,9 @@ const SideBar = (props) => {
     return (
     <div className="sidebar">
         <h1>  <span className="username">John</span>'s notes</h1>
-        <div className="div"><a href="#" className="btn btn-create">New note <i className="fas fa-plus-circle"></i></a> </div>
+        <div className="div">
+            <a href="#" className="btn btn-create" onClick={openNewNote}>New note <i className="fas fa-plus-circle"></i></a>
+        </div>
         <div className="div">
             <h2>My notes:</h2>
             <ul className="note-ul">
