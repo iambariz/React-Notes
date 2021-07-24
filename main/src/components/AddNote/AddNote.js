@@ -34,7 +34,7 @@ const AddNote = (props) => {
             <label htmlFor="Title" >Note title</label>
     
             <input type="text" className="title" name="Title" required
-            minLength="1" maxLength="12" placeholder="Title" onChange={titleChangeHandler}/>
+            minLength="1" maxLength="8" placeholder="Title" onChange={titleChangeHandler}/>
             </div>
 
             <textarea className="note-text" name="note-text" rows="6" cols="50" onChange={contentChangeHandler} placeholder="Lorem ipsum dolor sit amet consectetur adipisicing elit.">
