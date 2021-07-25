@@ -51,6 +51,21 @@ const notes = [
 
 const App = () => {
 
+  const accesLocalStorage = () => {
+
+  }
+
+  const saveLocalStorage = (note) => {
+    localStorage.setItem('note', JSON.stringify(note));
+  }
+
+  saveLocalStorage(notes[0])
+
+  const note = localStorage.getItem('note');
+
+  console.log(note)
+  console.log(JSON.parse(note))
+
   const [EditedNotes, updateNote] = useState(notes);
 
   const updateNoteHandler = (removedNote) => {
