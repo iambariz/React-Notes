@@ -52,7 +52,7 @@ const notes = [
 const App = () => {
 
   const accesLocalStorage = () => {
-    const notes = JSON.parse(localStorage.getItem("notes")); 
+    const notes = JSON.parse(localStorage.getItem("notes") || "[]"); 
     return notes
   }
 
