@@ -55,16 +55,13 @@ const App = () => {
 
   }
 
-  const saveLocalStorage = (note) => {
-    localStorage.setItem('note', JSON.stringify(note));
+  const saveLocalStorage = (noteList) => {
+    const notes = JSON.parse(localStorage.getItem("notes") || "[]");
+    noteList.forEach(note => {
+      notes.push(JSON.stringify(note));
+    })
+    console.log(notes)
   }
-
-  saveLocalStorage(notes[0])
-
-  const note = localStorage.getItem('note');
-
-  console.log(note)
-  console.log(JSON.parse(note))
 
   const [EditedNotes, updateNote] = useState(notes);
 
@@ -75,7 +72,7 @@ const App = () => {
         // eslint-disable-next-line eqeqeq
         return value.id != removedNote;
       });
-
+      saveLocalStorage(filtered)
       return filtered
     })
 
@@ -93,6 +90,7 @@ const App = () => {
         return value
       });
 //      console.log(filtered)
+      saveLocalStorage(filtered)    
       return filtered
     })
     // const element = document.querySelector(`[data-id*="${editedElementId}"]`);
@@ -113,6 +111,7 @@ const App = () => {
         return value
       });
 //      console.log(filtered)
+      saveLocalStorage(filtered)
       return filtered
     })
   }
@@ -126,6 +125,7 @@ const App = () => {
       id: new Date().getTime(),
     }
     updateNote((prevValue) =>{
+      saveLocalStorage([...prevValue, newValue])
         return [...prevValue, newValue];
       });
   }
