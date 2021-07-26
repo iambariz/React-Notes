@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React from 'react';
 import "./NoteListItem";
 
 const EditField = (props) =>{

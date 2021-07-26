@@ -40,7 +40,7 @@ const AddNote = (props) => {
             <textarea className="note-text" name="note-text" rows="6" cols="50" onChange={contentChangeHandler} placeholder="Lorem ipsum dolor sit amet consectetur adipisicing elit.">
             </textarea>
     
-            <a href="#" className="btn btn-submit" onClick={forwardData} >Add note</a>
+            <button href="#" className="btn btn-submit" onClick={forwardData} >Add note</button>
     
             <i className="fas fa-times btn-close-form" onClick={closeWindow} ></i>
           </div>

@@ -5,49 +5,49 @@ import SideBar from './components/Sidebar/SideBar';
 import AddNote from './components/AddNote/AddNote';
 // import NoteListItem from './components/NoteListItem.js'
 
-const content = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto voluptatibus, alias molestiae quibusdam a voluptas vitae repudiandae recusandae praesentium est reprehenderit harum deleniti pariatur eos sit mollitia minus iste nesciunt."
+// const content = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto voluptatibus, alias molestiae quibusdam a voluptas vitae repudiandae recusandae praesentium est reprehenderit harum deleniti pariatur eos sit mollitia minus iste nesciunt."
 
 
 //Dummy data
 
 
-const notes = [
-  {
-    title: "Test 1",
-    onEdit: true,
-    desc: content,
-    id: 1
-  },
-  {
-    title: "Test 2",
-    onEdit: false,
-    desc: content,
-    id: 2
-  },
-  {
-    title: "Test 3",
-    onEdit: false,
-    desc: content,
-    id: 3
-  },
-  {
-    title: "Test 4",
-    onEdit: false,
-    desc: content,
-    id: 4
-  },
-  {
-    title: "Test 5",
-    onEdit: false,
-    desc: content,
-    id: 5
-  },
-  {
-    title: "Test 6",
-    onEdit: false,
-    desc: content,
-    id: 6
-  },]
+// const notes = [
+//   {
+//     title: "Test 1",
+//     onEdit: true,
+//     desc: content,
+//     id: 1
+//   },
+//   {
+//     title: "Test 2",
+//     onEdit: false,
+//     desc: content,
+//     id: 2
+//   },
+//   {
+//     title: "Test 3",
+//     onEdit: false,
+//     desc: content,
+//     id: 3
+//   },
+//   {
+//     title: "Test 4",
+//     onEdit: false,
+//     desc: content,
+//     id: 4
+//   },
+//   {
+//     title: "Test 5",
+//     onEdit: false,
+//     desc: content,
+//     id: 5
+//   },
+//   {
+//     title: "Test 6",
+//     onEdit: false,
+//     desc: content,
+//     id: 6
+//   },]
 
 const App = () => {
 

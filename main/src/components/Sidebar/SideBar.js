@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React from 'react';
 import SideBarNote from './SideBarNote';
 import "./SideBar.css";
 
@@ -31,13 +31,13 @@ const SideBar = (props) => {
     <div className="sidebar">
         <h1>  <span className="username">John</span>'s notes</h1>
         <div className="div">
-            <a href="#" className="btn btn-create" onClick={openNewNote}>New note <i className="fas fa-plus-circle"></i></a>
+            <button href="#" className="btn btn-create" onClick={openNewNote}>New note <i className="fas fa-plus-circle"></i></button>
         </div>
         <div className="div">
             <h2>My notes:</h2>
             <ul className="note-ul">
                 {props.data.map((element, index) => {
-                    return(<SideBarNote key={index} id={element.id} title={element.title} onRemove={deleteItemHandler} onEdit={editItemHandler}/>)
+                    return(<SideBarNote id={element.id} title={element.title} onRemove={deleteItemHandler} onEdit={editItemHandler}/>)
                 })}
             </ul>
             
