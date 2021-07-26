@@ -52,7 +52,7 @@ const notes = [
 const App = () => {
 
   const accesLocalStorage = () => {
-    const notes = window.localStorage.getItem('user');
+    const notes = JSON.parse(localStorage.getItem("notes")); 
     return notes
   }
 
@@ -61,7 +61,7 @@ const App = () => {
     console.log(    localStorage.setItem("notes", JSON.stringify(noteList))    )
   }
 
-  const [EditedNotes, updateNote] = useState(notes);
+  const [EditedNotes, updateNote] = useState(accesLocalStorage);
 
   const updateNoteHandler = (removedNote) => {
     //console.log(removedNote);
