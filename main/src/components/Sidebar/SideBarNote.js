@@ -9,41 +9,35 @@ import ListItemText from "@material-ui/core/ListItemText";
 import Avatar from "@material-ui/core/Avatar";
 import ListItemAvatar from "@material-ui/core/ListItemAvatar";
 import FolderIcon from "@material-ui/icons/Folder";
-
-const styles = (theme) => ({
-	root: {
-		backgroundColor: theme.palette.primary.main,
-	},
-	selected: {
-		backgroundColor: "red",
-	},
-});
+import { ThemeProvider } from "@material-ui/styles";
+import theme from "../theme";
 
 const SideBarNote = (props) => {
 	//console.log(props.id)
 	return (
-		<ListItem
-			key={props.id}
-			data-id={props.id}
-			color={"primary"}
-			className="note-li"
-			style={{
-				maxWidth: "13rem",
-				maxHeight: "3rem",
-				backgroundColor: "primary",
-			}}
-		>
-			<ListItemAvatar>
-				<Avatar>
-					<FolderIcon />
-				</Avatar>
-			</ListItemAvatar>
-			<ListItemText>{props.title}</ListItemText>
-			<EditIcon className="fas fa-edit btn-edit" onClick={props.onEdit} />
-			<IconButton edge="end" aria-label="delete">
-				<DeleteForeverIcon onClick={props.onRemove} />
-			</IconButton>
-		</ListItem>
+		<ThemeProvider theme={theme}>
+			<ListItem
+				key={props.id}
+				data-id={props.id}
+				color={"primary"}
+				className="note-li"
+				style={{
+					maxWidth: "15rem",
+					maxHeight: "3.25rem",
+					backgroundColor: theme.palette.primary.light,
+					padding: "1.75rem, auto",
+				}}
+			>
+				<ListItemAvatar>
+					<Avatar>
+						<FolderIcon />
+					</Avatar>
+				</ListItemAvatar>
+				<ListItemText>{props.title}</ListItemText>
+				<EditIcon className="btn-edit" onClick={props.onEdit} />
+				<DeleteForeverIcon className="btn-edit" onClick={props.onRemove} />
+			</ListItem>
+		</ThemeProvider>
 	);
 };
 

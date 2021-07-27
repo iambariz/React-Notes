@@ -6,6 +6,7 @@ import NoteAddIcon from "@material-ui/icons/NoteAdd";
 import Button from "@material-ui/core/Button";
 import { Container } from "@material-ui/core";
 import List from "@material-ui/core/List";
+import theme from "../theme";
 
 const SideBar = (props) => {
 	const deleteItemHandler = (item) => {
@@ -36,10 +37,10 @@ const SideBar = (props) => {
 			maxWidth={false}
 			style={{
 				width: "auto",
+				backgroundColor: theme.palette.primary.dark,
 			}}
 		>
 			<h1>
-				{" "}
 				<span className="username">John</span>'s notes
 			</h1>
 			<div className="div">

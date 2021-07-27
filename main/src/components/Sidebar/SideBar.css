@@ -28,7 +28,7 @@
     bottom: -.5rem;
     left: 12.5%;
     width: 75%;
-    border-bottom: 1.5px solid #E1481B;
+    border-bottom: 1.5px solid #9e9e9e;
 }
 
 .btn-create{
@@ -90,7 +90,7 @@ h2{
     font-weight: bold;
     color: #EAF3F0;
     margin: .75rem auto;
-    padding: .50rem ;
+    padding: .70rem ;
     border-radius: 1.2rem;
     text-align: center;
     display: flex;
@@ -98,13 +98,14 @@ h2{
     justify-content: space-evenly;
 }
 
-.btn-sidebar{
-    color: #E1481B;
-    cursor: pointer;
-}
 
 .btn-edit{
     cursor: pointer;
     color: #ffffff;
     font-size: 1rem;
+    padding-left: .5rem;
+}
+
+.btn-edit:hover{
+    color: #AEA8AB;
 }
