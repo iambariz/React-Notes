@@ -1,7 +1,6 @@
 import React from "react";
 import SideBarNote from "./SideBarNote";
 import "./SideBar.css";
-import { Typography } from "@material-ui/core";
 import NoteAddIcon from "@material-ui/icons/NoteAdd";
 import Button from "@material-ui/core/Button";
 import { Container } from "@material-ui/core";

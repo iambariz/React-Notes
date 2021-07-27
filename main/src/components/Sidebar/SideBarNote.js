@@ -3,14 +3,12 @@ import "./SideBar.css";
 import EditIcon from "@material-ui/icons/Edit";
 import DeleteForeverIcon from "@material-ui/icons/DeleteForever";
 import ListItem from "@material-ui/core/ListItem";
-import IconButton from "@material-ui/core/IconButton";
-import { withStyles } from "@material-ui/core/styles";
 import ListItemText from "@material-ui/core/ListItemText";
 import Avatar from "@material-ui/core/Avatar";
 import ListItemAvatar from "@material-ui/core/ListItemAvatar";
-import FolderIcon from "@material-ui/icons/Folder";
 import { ThemeProvider } from "@material-ui/styles";
 import theme from "../theme";
+import NotesIcon from "@material-ui/icons/Notes";
 
 const SideBarNote = (props) => {
 	//console.log(props.id)
@@ -29,8 +27,17 @@ const SideBarNote = (props) => {
 				}}
 			>
 				<ListItemAvatar>
-					<Avatar>
-						<FolderIcon />
+					<Avatar
+						style={{
+							backgroundColor: theme.palette.primary.light,
+						}}
+					>
+						<NotesIcon
+							style={{
+								fontSize: 20,
+								color: theme.palette.secondary.light,
+							}}
+						/>
 					</Avatar>
 				</ListItemAvatar>
 				<ListItemText>{props.title}</ListItemText>

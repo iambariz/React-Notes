@@ -3,11 +3,7 @@ import ReactDOM from "react-dom";
 import NoteHolder from "./components/Note/NoteHolder";
 import SideBar from "./components/Sidebar/SideBar";
 import AddNote from "./components/AddNote/AddNote";
-import {
-	createTheme,
-	makeStyles,
-	ThemeProvider,
-} from "@material-ui/core/styles";
+import { createTheme, ThemeProvider } from "@material-ui/core/styles";
 // import NoteListItem from './components/NoteListItem.js'
 
 // const content = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto voluptatibus, alias molestiae quibusdam a voluptas vitae repudiandae recusandae praesentium est reprehenderit harum deleniti pariatur eos sit mollitia minus iste nesciunt."
