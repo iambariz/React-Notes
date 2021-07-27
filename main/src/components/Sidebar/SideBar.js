@@ -4,6 +4,8 @@ import "./SideBar.css";
 import { Typography } from "@material-ui/core";
 import NoteAddIcon from "@material-ui/icons/NoteAdd";
 import Button from "@material-ui/core/Button";
+import { Container } from "@material-ui/core";
+import List from "@material-ui/core/List";
 
 const SideBar = (props) => {
 	const deleteItemHandler = (item) => {
@@ -29,25 +31,40 @@ const SideBar = (props) => {
 	// })
 
 	return (
-		<div className="sidebar">
+		<Container
+			className="sidebar"
+			maxWidth={false}
+			style={{
+				width: "auto",
+			}}
+		>
 			<h1>
 				{" "}
 				<span className="username">John</span>'s notes
 			</h1>
 			<div className="div">
 				<Button
-					color="secondary"
+					style={{
+						width: "100%",
+						maxHeight: "155px",
+						minHeight: "60px",
+						fontSize: "20px",
+						letterSpacing: "3.5px",
+						margin: "0 auto",
+						borderRadius: ".75rem",
+					}}
+					color={"primary"}
 					onClick={openNewNote}
 					variant="contained"
-					endIcon={<NoteAddIcon />}
+					endIcon={<NoteAddIcon style={{ fontSize: "35px" }} />}
 					size="large"
 				>
-					Add note
+					Create note
 				</Button>
 			</div>
 			<div className="div">
-				<Typography variant="h2">My notes:</Typography>
-				<ul className="note-ul">
+				{/* <Typography variant="h4">My notes:</Typography> */}
+				<List className="note-ul">
 					{props.data.map((element, index) => {
 						return (
 							<SideBarNote
@@ -58,10 +75,9 @@ const SideBar = (props) => {
 							/>
 						);
 					})}
-				</ul>
+				</List>
 			</div>
-			<div className="div"></div>
-		</div>
+		</Container>
 	);
 };
 
