@@ -4,6 +4,7 @@ import "./NoteListItem.css";
 import CloseIcon from "@material-ui/icons/Close";
 import Container from "@material-ui/core/Container";
 import Typography from "@material-ui/core/Typography";
+import noteTheme from "../Themes/noteTheme";
 
 const NoteListItem = (props) => {
 	// const removeItem = (e) => {
@@ -23,9 +24,14 @@ const NoteListItem = (props) => {
 				width: "20rem",
 				height: "18rem",
 				padding: "0px",
+				backgroundColor: noteTheme.palette.primary.main,
 			}}
 		>
-			<Typography variant="h5" className="note-title">
+			<Typography
+				variant="h5"
+				className="note-title"
+				style={{ backgroundColor: noteTheme.palette.primary.dark }}
+			>
 				{props.title}
 			</Typography>
 			{
@@ -40,7 +46,11 @@ const NoteListItem = (props) => {
 					<p className="note-desc">{props.desc}</p>
 				)
 			}
-			<CloseIcon className="fas fa-times btn-close" onClick={props.onDelete} />
+			<CloseIcon
+				size="large"
+				className="fas fa-times btn-close"
+				onClick={props.onDelete}
+			/>
 		</Container>
 	);
 };
