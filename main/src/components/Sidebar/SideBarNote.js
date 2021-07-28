@@ -7,7 +7,7 @@ import ListItemText from "@material-ui/core/ListItemText";
 import Avatar from "@material-ui/core/Avatar";
 import ListItemAvatar from "@material-ui/core/ListItemAvatar";
 import { ThemeProvider } from "@material-ui/styles";
-import theme from "../theme";
+import theme from "../Themes/theme";
 import NotesIcon from "@material-ui/icons/Notes";
 
 const SideBarNote = (props) => {

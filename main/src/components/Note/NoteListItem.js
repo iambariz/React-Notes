@@ -2,6 +2,8 @@ import React from "react";
 import EditField from "./EditField";
 import "./NoteListItem.css";
 import CloseIcon from "@material-ui/icons/Close";
+import Container from "@material-ui/core/Container";
+import Typography from "@material-ui/core/Typography";
 
 const NoteListItem = (props) => {
 	// const removeItem = (e) => {
@@ -13,12 +15,19 @@ const NoteListItem = (props) => {
 	};
 
 	return (
-		<div
+		<Container
 			className={props.onEdit ? "note-item onEdit" : "note-item"}
 			data-id={props.id}
 			key={props.key}
+			style={{
+				width: "20rem",
+				height: "18rem",
+				padding: "0px",
+			}}
 		>
-			<h3 className="note-title">{props.title}</h3>
+			<Typography variant="h5" className="note-title">
+				{props.title}
+			</Typography>
 			{
 				//Check if message failed
 				props.onEdit === true ? (
@@ -32,7 +41,7 @@ const NoteListItem = (props) => {
 				)
 			}
 			<CloseIcon className="fas fa-times btn-close" onClick={props.onDelete} />
-		</div>
+		</Container>
 	);
 };
 

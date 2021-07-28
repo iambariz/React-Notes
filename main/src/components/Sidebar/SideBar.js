@@ -5,7 +5,7 @@ import NoteAddIcon from "@material-ui/icons/NoteAdd";
 import Button from "@material-ui/core/Button";
 import { Container } from "@material-ui/core";
 import List from "@material-ui/core/List";
-import theme from "../theme";
+import theme from "../Themes/theme";
 
 const SideBar = (props) => {
 	const deleteItemHandler = (item) => {
