@@ -65,6 +65,8 @@ textarea{
     background-color: #fff;
     border-radius: 1rem;
     transition: .6s ease all;
+    max-width: 25rem!important;
+    margin: 0 auto!important;
 }
 
 .btn-submit:hover{
